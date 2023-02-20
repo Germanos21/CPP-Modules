@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchernys <gchernys@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 00:59:29 by gchernys          #+#    #+#             */
-/*   Updated: 2023/02/20 04:46:42 by gchernys         ###   ########.fr       */
+/*   Created: 2023/02/20 04:43:29 by gchernys          #+#    #+#             */
+/*   Updated: 2023/02/20 13:12:26 by gchernys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_h
+# define PHONEBOOK_H
+#include "contacts.hpp"
+#include <iomanip>
+#include <string>
+#include <cstring>
 #include <iostream>
 
-int main(int argc, char **argv)
+class Phonebook
 {
-	int	i;
-	int	j;
+private:
 
-	j = 1;
-	if (argc <= 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	while (argv[j])
-	{
-		i = 0;
-		while (argv[j][i])
-		{
-			if (islower(argv[j][i]) != 0)
-				argv[j][i] = toupper(argv[j][i]);
-			std::cout << argv[j][i];
-			i++;
-		}
-		j++;
-	}
-	std::cout << std::endl;
-	return (0);
-}
+public:
+	contacts	contact[8];
+	int	index_;
+	//Constructor
+	Phonebook();
+	//Deconstructor
+	~Phonebook();
+};
+
+#endif
