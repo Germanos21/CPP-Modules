@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchernys <gchernys@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 04:43:29 by gchernys          #+#    #+#             */
-/*   Updated: 2023/02/20 13:12:26 by gchernys         ###   ########.fr       */
+/*   Created: 2023/02/21 07:30:31 by gchernys          #+#    #+#             */
+/*   Updated: 2023/02/21 07:31:11 by gchernys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_h
-# define PHONEBOOK_H
-#include "contacts.hpp"
-#include <iomanip>
-#include <string>
-#include <cstring>
-#include <iostream>
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
+# include <iostream>
+# include <iomanip>
+# include <string>
 
 class Phonebook
 {
 private:
 
 public:
-	contacts	contact[8];
-	int	index_;
-	//Constructor
 	Phonebook();
-	//Deconstructor
 	~Phonebook();
 };
 

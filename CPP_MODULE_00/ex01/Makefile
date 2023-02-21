@@ -5,17 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gchernys <gchernys@42abudhabi.ae>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/20 04:46:57 by gchernys          #+#    #+#              #
-#    Updated: 2023/02/20 13:31:09 by gchernys         ###   ########.fr        #
+#    Created: 2023/02/21 07:22:15 by gchernys          #+#    #+#              #
+#    Updated: 2023/02/21 07:23:05 by gchernys         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = contactbook
+NAME = phonebook
 
 CC = g++
-SRCS =	main.cpp		\
-		contacts.cpp	\
-		phonebook.cpp
+SRCS = main.cpp
 CFLANG = -Wall -Wextra -Werror -std=c++98 -pedantic
 OBJS = $(SRCS:.cpp=.o)
 
