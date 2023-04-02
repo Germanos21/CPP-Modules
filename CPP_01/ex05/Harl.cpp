@@ -54,10 +54,9 @@ void	Harl::complain(std::string level)
 					ft_ptr = &Harl::error;
 					(this->*ft_ptr)();
 					return ;
-				default:
-					std::cout << "Invalid Level" << std::endl;
 			}
 		}
 	}
+	std::cout << "Invalid Level" << std::endl;
 	return ;
 }
