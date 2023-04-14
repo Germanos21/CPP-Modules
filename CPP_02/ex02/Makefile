@@ -1,10 +1,10 @@
-NAME = SecondClass
+NAME = ThirdClass
 
 CC = c++
 SRCS =	main.cpp	\
 		Fixed.cpp
 
-CFLAG = -Wall -Wextra -Werror -std=c++98 -pedantic
+CFLAG = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

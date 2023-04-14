@@ -12,16 +12,16 @@ private:
 	static const int	aFractionalBits = 8;
 public:
 	Fixed();
+	Fixed(const Fixed &copy);
+	Fixed &operator=(const Fixed &copy);
+	~Fixed();
 	Fixed(const int Value);
 	Fixed(const float Value);
-	Fixed(const Fixed &copy);
-	~Fixed();
 	int 	getRawBits(void) const;
 	void	setRawBits(int const raw);
 	void	setRawBits(float const raw);
 	float	toFloat() const;
 	int		toInt() const;
-	Fixed &operator=(const Fixed &copy);
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &copy);
