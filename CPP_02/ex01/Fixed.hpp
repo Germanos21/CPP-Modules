@@ -17,11 +17,11 @@ public:
 	~Fixed();
 	Fixed(const int Value);
 	Fixed(const float Value);
+	float	toFloat() const;
+	int		toInt() const;
 	int 	getRawBits(void) const;
 	void	setRawBits(int const raw);
 	void	setRawBits(float const raw);
-	float	toFloat() const;
-	int		toInt() const;
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &copy);

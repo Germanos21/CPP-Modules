@@ -8,9 +8,9 @@ int main()
 
 	test1.attack("fish");
 	std::cout << std::endl;
-	test1.takeDamage(1);
+	test1.takeDamage(10);
 	std::cout << std::endl;
-	test1.beRepaired(1004);
+	test1.beRepaired(10);
 	std::cout << std::endl;
 	test1.guardGate();
 	std::cout << std::endl;

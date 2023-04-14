@@ -21,6 +21,16 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 	std::cout << "Copy constructor called" << std::endl;
 }
 
+ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
+{
+	this->aName = copy.aName;
+	this->aHitPoints = copy.aHitPoints;
+	this->aEnergyPoints = copy.aEnergyPoints;
+	this->aAttackDamage = copy.aAttackDamage;
+	std::cout << "Assignation operator called" << std::endl;
+	return (*this);
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Destructor called" << std::endl;

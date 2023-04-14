@@ -11,7 +11,7 @@ private:
 	int					aValue;
 	static const int	aFractionalBits = 8;
 public:
-	//Constructor and Destructor
+	//Constructors and Destructor
 	Fixed();
 	Fixed(const Fixed &copy);
 	Fixed(const int Value);
