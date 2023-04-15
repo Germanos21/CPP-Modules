@@ -1,4 +1,4 @@
-
+#include "Animal.hpp"
 
 Animal::Animal()
 {
@@ -22,4 +22,14 @@ Animal &Animal::operator=(const Animal &copy)
 	std::cout << "Animal Copy assignment operator called" << std::endl;
 	this->type = copy.getType();
 	return (*this);
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Animal sound" << std::endl;
+}
+
+std::string	Animal::getType() const
+{
+	return (this->type);
 }

@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = Animal
 
 CC = c++
 SRCS =	main.cpp
