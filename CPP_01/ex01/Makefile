@@ -1,17 +1,17 @@
-NAME =  Moar-brainz
+NAME = Horde
 
-CC = c++
+CXX = c++
 SRCS =	main.cpp		\
 		Zombie.cpp		\
-		zombieHorde.cpp	\
+		zombieHorde.cpp
 
-CFLAG = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)

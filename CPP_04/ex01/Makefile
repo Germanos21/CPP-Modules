@@ -1,19 +1,19 @@
 NAME = Brain
 
-CC = c++
+CXX = c++
 SRCS =	main.cpp	\
 		Animal.cpp	\
 		Dog.cpp		\
 		Cat.cpp		\
 		Brain.cpp
 
-CFLAG = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Wpedantic
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)

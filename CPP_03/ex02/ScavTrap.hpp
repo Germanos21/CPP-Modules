@@ -7,9 +7,9 @@ class ScavTrap : public ClapTrap
 {
 private:
 	std::string		aName;
-	long long		aHitPoints;
-	long long		aEnergyPoints;
-	long long		aAttackDamage;
+	long 			aHitPoints;
+	long 			aEnergyPoints;
+	long 			aAttackDamage;
 public:
 	ScavTrap();
 	ScavTrap(std::string name);

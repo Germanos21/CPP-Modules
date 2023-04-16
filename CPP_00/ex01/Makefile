@@ -1,16 +1,17 @@
-NAME = ezBook
+NAME = megaphone
 
-CC = c++
-SRCS =	main.cpp	\
-		Contact.cpp	\
-		PhoneBook.cpp
-CFLAG = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXX = c++
+SRCS =	main.cpp		\
+		PhoneBook.cpp	\
+		Contact.cpp
+
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)

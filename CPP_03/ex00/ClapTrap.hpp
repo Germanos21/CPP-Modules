@@ -8,9 +8,9 @@ class ClapTrap
 {
 private:
 	std::string		aName;
-	long long		aHitPoints;
-	long long		aEnergyPoints;
-	long long		aAttackDamage;
+	long aHitPoints;
+	long aEnergyPoints;
+	long aAttackDamage;
 public:
 	ClapTrap();
 	ClapTrap(const ClapTrap &copy);

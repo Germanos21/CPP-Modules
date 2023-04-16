@@ -20,6 +20,7 @@ FragTrap::FragTrap(const FragTrap &copy)
 FragTrap::FragTrap(std::string name)
 {
 	std::cout << "FragTrap constructor called" << std::endl;
+	this->aName = name;
 	this->aHitPoints = 100;
 	this->aEnergyPoints = 100;
 	this->aAttackDamage = 30;

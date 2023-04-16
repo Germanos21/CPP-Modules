@@ -1,18 +1,18 @@
-NAME = Unneccessary_Violence
+NAME = Violence
 
-CC = c++
-SRCS =	main.cpp	\
-		Weapon.cpp	\
-		HumanA.cpp	\
-		HumanB.cpp
+CXX = c++
+SRCS =	main.cpp		\
+		HumanA.cpp		\
+		HumanB.cpp		\
+		Weapon.cpp
 
-CFLAG = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)

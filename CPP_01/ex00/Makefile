@@ -1,18 +1,18 @@
-NAME = BraiiiiiiinnnzzzZ
+NAME = Brainz
 
-CC = c++
-SRCS =	main.cpp 		\
-		Zombie.cpp 		\
-		randomChump.cpp \
-		newZombie.cpp
+CXX = c++
+SRCS =	main.cpp		\
+		newZombie.cpp	\
+		randomChump.cpp	\
+		Zombie.cpp
 
-CFLAG = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)

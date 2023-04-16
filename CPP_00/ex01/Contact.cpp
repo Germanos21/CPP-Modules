@@ -1,10 +1,10 @@
 #include "Contact.hpp"
 
 //constructor
-Contact::Contact() {};
+Contact::Contact() {}
 
 //destructor
-Contact::~Contact() {};
+Contact::~Contact() {}
 
 //setters
 void	Contact::setFirstName(std::string firstname)
