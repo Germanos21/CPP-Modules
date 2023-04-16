@@ -3,6 +3,7 @@
 WrongAnimal::WrongAnimal()
 {
 	std::cout << "WrongAnimal constructor called" << std::endl;
+	this->type = "WrongAnimal";
 }
 
 WrongAnimal::~WrongAnimal()

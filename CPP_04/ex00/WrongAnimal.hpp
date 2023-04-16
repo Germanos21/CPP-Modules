@@ -10,11 +10,11 @@ protected:
 	std::string	type;
 public:
 	WrongAnimal();
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 	WrongAnimal &operator=(const WrongAnimal &copy);
 	WrongAnimal(const WrongAnimal &copy);
 	std::string	getType() const;
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 
