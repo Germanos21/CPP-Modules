@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = Ezbook
 
 CXX = c++
 SRCS =	main.cpp		\
