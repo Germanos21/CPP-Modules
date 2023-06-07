@@ -49,7 +49,8 @@ int main()
 	try 
 	{
 		/* TEST 5*/
-		Bureaucrat Yao("Yao", 10);
+		Bureaucrat Yao("Yao", 150);
+		std::cout << Yao << std::endl;
 		Yao.IncrementGrade();
 		std::cout << Yao << std::endl;
 	}
