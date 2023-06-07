@@ -31,11 +31,12 @@ public:
 		public:
 		virtual const char* what() const throw();
 	};
-	std::string	getName() const;
-	bool		getSigned() const;
-	int			getMinGradeSign() const;
-	int			getMinGradeExec() const;
-	void		beSigned(Bureaucrat &guy);
+	virtual std::string	getName() const;
+	virtual bool		getSigned() const;
+	virtual int			getMinGradeSign() const;
+	virtual int			getMinGradeExec() const;
+	virtual void		beSigned(Bureaucrat &guy);
+	// virtual void		execute(Bureaucrat const & executor);
 };
 
 std::ostream& operator<<(std::ostream& out, const AForm& AForm);

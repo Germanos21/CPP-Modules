@@ -89,3 +89,8 @@ void	AForm::beSigned(Bureaucrat &guy)
 		guy.signAForm(*this);
 	}
 }
+
+// void	AForm::execute(Bureaucrat const & executor)
+// {
+	
+// }
