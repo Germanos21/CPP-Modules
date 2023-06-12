@@ -31,12 +31,17 @@ public:
 		public:
 		virtual const char* what() const throw();
 	};
+	class	NotSignedException : public std::exception
+	{
+		public:
+		virtual const char* what() const throw();
+	};
 	virtual std::string	getName() const;
 	virtual bool		getSigned() const;
 	virtual int			getMinGradeSign() const;
 	virtual int			getMinGradeExec() const;
 	virtual void		beSigned(Bureaucrat &guy);
-	// virtual void		execute(Bureaucrat const & executor);
+	virtual void		execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream& operator<<(std::ostream& out, const AForm& AForm);

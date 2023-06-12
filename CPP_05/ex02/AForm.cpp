@@ -90,7 +90,7 @@ void	AForm::beSigned(Bureaucrat &guy)
 	}
 }
 
-// void	AForm::execute(Bureaucrat const & executor)
-// {
-	
-// }
+const char *AForm::NotSignedException::what() const throw()
+{
+	return("Error:\n Cannot Execute: Form not signed");
+}
