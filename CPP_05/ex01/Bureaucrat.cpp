@@ -13,7 +13,7 @@ Bureaucrat::~Bureaucrat()
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
 {
-	std::cout << "Bureaucrat Assignment opertaor called" << std::endl;
+	std::cout << "Bureaucrat Assignment operator called" << std::endl;
 	if (this == &src)
 		return (*this);
 	else
@@ -37,20 +37,20 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 {
 	std::cout << "Bureaucrat constructor called" << std::endl;
 	if (grade > 150)
-		throw GradeTooLowException();
+		throw (Bureaucrat::GradeTooLowException());
 	else if (grade < 1)
-		throw GradeTooHighException();
+		throw (Bureaucrat::GradeTooHighException());
 	this->_grade = grade;
 }
 
 const char  *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return("Bureaucrat Grade too high");
+	return("Grade too high exception");
 }
 
 const char  *Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return("Bureaucrat Grade too Low");
+	return("Grade too low exception");
 }
 
 int Bureaucrat::getGrade() const
@@ -88,4 +88,9 @@ int	Bureaucrat::setGrade(int grade)
 	else if (grade < 1)
 		throw GradeTooHighException();
 	return (this->_grade = grade);
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+	form.beSigned(*this);
 }
