@@ -1,11 +1,13 @@
 NAME = Bureaucrat
 
 CXX = c++
-SRCS =	main.cpp		\
-		Bureaucrat.cpp	\
-		Form.cpp
+SRCS =	main.cpp					\
+		Bureaucrat.cpp				\
+		AForm.cpp					\
+		ShrubberyCreationForm.cpp	\
+		PresidentialPardonForm.cpp
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
