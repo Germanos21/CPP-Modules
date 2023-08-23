@@ -2,6 +2,7 @@
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main()
 {
@@ -51,11 +52,14 @@ int main()
     //     std::cerr << e.what() << '\n';
     // }
     // std::cout << AForm << std::endl;
-    Bureaucrat guy("boss", 1);
-    ShrubberyCreationForm shrub("wow");
-    PresidentialPardonForm pardon("joan");
+    Bureaucrat              guy("boss", 1);
+    ShrubberyCreationForm   shrub("wow");
+    PresidentialPardonForm  pardon("joan");
+    RobotomyRequestForm     robot("targeted");
+
     try
     {
+        std::cout << pardon << std::endl;
         guy.signAForm(pardon);
         std::cout << pardon << std::endl;
         pardon.execute(guy);

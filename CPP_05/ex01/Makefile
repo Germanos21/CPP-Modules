@@ -3,7 +3,7 @@ NAME = Bureaucrat
 CXX = c++
 SRCS =	main.cpp		\
 		Bureaucrat.cpp	\
-		Form.cpp
+		AForm.cpp
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 OBJS = $(SRCS:.cpp=.o)

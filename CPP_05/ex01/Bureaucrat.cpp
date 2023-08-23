@@ -90,7 +90,7 @@ int	Bureaucrat::setGrade(int grade)
 	return (this->_grade = grade);
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signAForm(AForm &AForm)
 {
-	form.beSigned(*this);
+	AForm.beSigned(*this);
 }

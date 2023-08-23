@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 // int main()
 // {
@@ -23,30 +23,30 @@
 
 int main()
 {
-    // Form form("form", 150, 150);
+    // AForm AForm("AForm", 150, 150);
     // Bureaucrat guy("guy", 12);
-    // std::cout << form << std::endl;
+    // std::cout << AForm << std::endl;
     // try
     // {
-    //     form.beSigned(guy);
+    //     AForm.beSigned(guy);
     // }
     // catch(const std::exception& e)
     // {
     //     std::cerr << e.what() << '\n';
     // }
-    // guy.signForm(form);
-    // std::cout << form << std::endl;
-    Form form("form", 149, 149);
+    // guy.signAForm(AForm);
+    // std::cout << AForm << std::endl;
+    AForm AForm("AForm", 149, 149);
     Bureaucrat guy("guy", 150);
-    std::cout << form << std::endl;
+    std::cout << AForm << std::endl;
     try
     {
-        form.beSigned(guy);
+        AForm.beSigned(guy);
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-    std::cout << form << std::endl;
+    std::cout << AForm << std::endl;
     return (0);
 }

@@ -6,6 +6,8 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {std::cout << "Shrubbery Creatio
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src) : AForm(src) {std::cout << "Shrubbery Creation Form Copy Constructor Called" << std::endl;}
 
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string location) : AForm("Presidential Pardon Form", 25, 5), _location(location) {std::cout << "Shrubbery Creation Form Parameterized Constructor Called" << std::endl;}
+
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &shrub)
 {
 	if (this == &shrub)
@@ -16,19 +18,12 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	return (*this);
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string location) : AForm("Presidential Pardon Form", 25, 5), _location(location)
-{
-	std::cout << "Shrubbery Creation Form Parameterized Constructor Called" << std::endl;
-}
-
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (executor.getGrade() > this->getMinExec())
+	if (this->getSigned() == false)
+		throw (FormNotSignedException());
+	else if (executor.getGrade() > this->getMinExec())
 		throw (GradeTooLowException());
-	else if (this->getSigned() == false)
-	{
-		throw (std::runtime_error("Form not Signed Exception"));
-	}
 	std::string filename = this->_location + "_shrubbery";
 	std::ofstream file(filename.c_str());
 	file << "   0000000" << std::endl;

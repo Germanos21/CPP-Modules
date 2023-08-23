@@ -71,13 +71,12 @@ void	AForm::beSigned(Bureaucrat &guy)
 	{
 		std::cout << "Bureacrat " << guy.getName() << " is unable to sign AForm " \
 		<< getName() << " because the AForm is already signed " << std::endl;
-		this->_issigned = true;
+		_issigned = true;
 	}
 	else
 	{
 		std::cout << "Bureaucrat " << guy.getName() << " has successfully signed " \
 		<< getName() << std::endl;
-		this->_issigned = true;
+		_issigned = true;
 	}
-	this->_issigned = false;
 }
