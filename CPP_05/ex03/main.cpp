@@ -3,6 +3,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -52,21 +53,61 @@ int main()
     //     std::cerr << e.what() << '\n';
     // }
     // std::cout << AForm << std::endl;
-    Bureaucrat              guy("boss", 1);
-    ShrubberyCreationForm   shrub("wow");
-    PresidentialPardonForm  pardon("joan");
-    RobotomyRequestForm     robot("targeted");
 
-    try
-    {
-        std::cout << pardon << std::endl;
-        guy.signAForm(pardon);
-        std::cout << pardon << std::endl;
-        pardon.execute(guy);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    // Bureaucrat              guy("boss", 1);
+    // ShrubberyCreationForm   shrub("wow");
+    // PresidentialPardonForm  pardon("joan");
+    // RobotomyRequestForm     robot("targeted");
+
+    // try
+    // {
+    //     std::cout << pardon << std::endl;
+    //     guy.signAForm(pardon);
+    //     std::cout << pardon << std::endl;
+    //     pardon.execute(guy);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+
+    	{
+		std::cout << std::endl;
+
+		std::cout << "\033[34mConstructing\033[0m" << std::endl;
+		Bureaucrat *a = new Bureaucrat("Emperor", 1);
+		Intern *z = new Intern();
+		AForm *b = z->makeForm("RobotomyRequestForm", "Bender");
+		AForm *c = z->makeForm("ShrubberyCreationForm", "Cristmas");
+		// AForm *c = new ShrubberyCreationForm("christmas");
+		std::cout << std::endl;
+
+		std::cout << "\033[34mTesting\033[0m" << std::endl;
+		std::cout << a;
+		std::cout << b;
+		std::cout << c;
+		std::cout << std::endl;
+
+		b->beSigned(*a);
+		a->signAForm(*c);
+		std::cout << std::endl;
+		std::cout << b;
+		std::cout << c;
+		std::cout << std::endl;
+
+		for (int i= 0; i < 10; i++)
+			b->execute(*a);
+		a->executeForm(*c);
+		// c->execute(*a);
+		std::cout << std::endl;
+
+		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
+		delete a;
+		delete b;
+		delete c;
+		delete z;
+		std::cout << std::endl;
+	}
+
     return (0);
 }
