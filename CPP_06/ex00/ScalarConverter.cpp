@@ -1,87 +1,35 @@
 #include "ScalarConverter.hpp"
 
-static void	print_char(char *input)
+static void convert_char(std::string input)
 {
-	if (!input)
-		return ;
 
-	int n = atoi(input);
+	if (input.empty())
+		return ;
 
 	std::cout << "char: ";
+	int check = 0;
+	std::istringstream str(input);
 
-	if (*input < '0' || *input > '9')
-		std::cout << "impossible" << std::endl;
-	else if (n < 32 || n > 126)
-		std::cout << "non printable" << std::endl;
-	else
-		std::cout << static_cast<char>(n) << std::endl;
-}
+	str >> check;
 
-static void	print_int(char *input)
-{
-	std::cout << "int: ";
-    if (!input || *input == '\0')
+	if (check == 0)
 	{
-        std::cerr << "impossible" << std::endl;
-        return ;
-    }
-
-    bool isNegative = false;
-    long int result = 0;
-    int i = 0;
-    if (input[0] == '-') {
-        isNegative = true;
-        i = 1;
-    }
-
-    while (input[i] != '\0')
-	{
-        if (isdigit(input[i]))
-		{
-            int digit = input[i] - '0';
-
-            result = result * 10 + digit;
-        }
-		else
-		{
-			std::cerr << "Impossible" << std::endl;
-			return ;
-        }
-		if (i > 11)
-		{
-			std::cerr << "Impossible" << std::endl;
-			return ;
-        }
-		i++;
-    }
-	
-	result =  isNegative ? -result : result;
-	
-	if (result < INT_MIN || result > INT_MAX)
-	{
-		std::cerr << "Impossible" << std::endl;
-		return ;
+		check = cpp_atoi_char(input);
+		if (check == 0)
+        	std::cout << "impossible" << std::endl;
 	}
-	
-	std::cout << static_cast<int>(result) << std::endl;
+
+    if (check >= 0 && check < 32)
+        std::cout << "Non displayable" << std::endl;
+    else if (check >= 32 && check <= 126)
+        std::cout << "'" << static_cast<char>(check) << "'" << std::endl;
+    else
+        std::cout << "impossible" << std::endl;
 }
 
-static void	print_float(char *input)
+void	ScalarConverter::Convert(std::string input)
 {
-	std::cout << "float: ";
-	float floatval = std::atof(input);
-
-	if (floatval != 0.0)
-		std::cout << static_cast<float>(floatval) << "f" << std::endl;
-	else
-		std::cout << "impossible" << std::endl; 
-}
-
-void	ScalarConverter::Convert(char *input)
-{
-	if (!input)
+	if (input.empty())
 		return ;
-	print_char(input);
-	print_int(input);
-	print_float(input);
+	convert_char(input);
 }
