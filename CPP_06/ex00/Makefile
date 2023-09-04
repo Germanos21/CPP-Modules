@@ -4,8 +4,7 @@ CXX = c++
 SRCS =	main.cpp			\
 		ScalarConverter.cpp	\
 		ScalarConverterUtils.cpp
-
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -pedantic
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
