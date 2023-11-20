@@ -2,9 +2,9 @@ SRCS	=	$(shell find . -name "*.cpp")
 
 OBJS	=	${SRCS:.cpp=.o}
 
-CXXFLAGS = -g -std=c++98 -Wall -Wextra -Werror 
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-NAME	=	convert
+NAME	=	serialize
 
 all: $(NAME)
 
