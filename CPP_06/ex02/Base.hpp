@@ -1,5 +1,4 @@
-#ifndef BASE_HPP
-# define BASE_HPP
+#pragma once
 
 class Base
 {
@@ -9,5 +8,3 @@ class Base
 	private:
 
 };
-
-#endif

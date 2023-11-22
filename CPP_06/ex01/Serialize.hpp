@@ -1,5 +1,4 @@
-#ifndef SERIALIZE_HPP
-# define SERIALIZE_HPP
+#pragma once
 
 #include <stdint.h>
 
@@ -19,5 +18,3 @@ class Serializer
 		Serializer& operator=(const Serializer& obj);
 		~Serializer();
 };
-
-#endif

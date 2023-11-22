@@ -73,11 +73,11 @@ void ScalarConverter::convert_char(std::string str)
 		std::cout << "Impossible\n";
 }
 
-int ScalarConverter::convert_int(std::string literal)
+int ScalarConverter::convert_int(std::string literals)
 {
-	int n = myStoi(literal);
-	if (literal.length() == 1 && !IS_NUMBER(literal[0]))
-		return (static_cast<int>(literal[0]));
+	int n = myStoi(literals);
+	if (literals.length() == 1 && !IS_NUMBER(literals[0]))
+		return (static_cast<int>(literals[0]));
 	return(n);
 }
 
